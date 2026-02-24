@@ -1,15 +1,7 @@
 import { useState } from "react";
-import type { Route } from "./+types/home";
-import { defaultDominoes } from "../data/dominoes";
-import { DominoCard } from "../components/domino-card";
 import { Controls } from "~/components/Controls";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "Dominoes" },
-    { name: "description", content: "Dominoes app" },
-  ];
-}
+import { DominoCard } from "../components/domino-card";
+import { defaultDominoes } from "../data/dominoes";
 
 export default function Home() {
   const [dominoes, setDominoes] = useState<[number, number][]>(defaultDominoes);
